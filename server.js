@@ -1,8 +1,14 @@
 const express = require("express");
+const expressLayouts = require("express-ejs-layouts")
 
 const app = express();
 
+app.use(expressLayouts);
+
 app.set('view engine', 'ejs')
+
+
+app.set("layout", "layout")
 
 app.use(express.static('public'))
 
